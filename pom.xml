@@ -23,7 +23,7 @@
   </properties>
 
   <scm>
-    <developerConnection>scm:git:git@github.com:avaje-pom/java8-parent.git</developerConnection>
+    <developerConnection>scm:git:https://github.com:avaje-pom/java8-parent.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
 
