@@ -8,7 +8,7 @@
   </parent>
 
   <artifactId>java8-parent</artifactId>
-  <version>1.1-SNAPSHOT</version>
+  <version>1.1</version>
   <packaging>pom</packaging>
   <name>java8-parent</name>
 
@@ -24,7 +24,7 @@
 
   <scm>
     <developerConnection>scm:git:https://github.com/avaje-pom/java8-parent.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>java8-parent-1.1</tag>
   </scm>
 
   <build>
