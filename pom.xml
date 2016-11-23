@@ -22,6 +22,8 @@
     <maven-dependency-plugin.version>2.10</maven-dependency-plugin.version>
     <build-helper-plugin.version>1.12</build-helper-plugin.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven-javadoc-plugin.version>2.10.3</maven-javadoc-plugin.version>
+    <pygments-doclet.version>1.0.0</pygments-doclet.version>
   </properties>
 
   <scm>
@@ -100,6 +102,34 @@
         </executions>
       </plugin>
 
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>${maven-javadoc-plugin.version}</version>
+        <configuration>
+          <source>${java.version}</source>
+          <doclet>org.avaje.doclet.PygmentsDoclet</doclet>
+          <docletArtifact>
+            <groupId>org.avaje</groupId>
+            <artifactId>pygments-doclet</artifactId>
+            <version>${pygments-doclet.version}</version>
+          </docletArtifact>
+          <additionalparam>
+            -Xdoclint:none
+          </additionalparam>
+          <show>public</show>
+          <linksource>true</linksource>
+        </configuration>
+
+        <executions>
+          <execution>
+            <id>attach-javadocs</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
 
     </plugins>
 
