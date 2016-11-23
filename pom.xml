@@ -19,6 +19,8 @@
   <properties>
     <java.version>1.8</java.version>
     <maven-compiler-plugin.version>3.5.1</maven-compiler-plugin.version>
+    <maven-dependency-plugin.version>2.10</maven-dependency-plugin.version>
+    <build-helper-plugin.version>1.12</build-helper-plugin.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
@@ -44,6 +46,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
+        <version>${maven-dependency-plugin.version}</version>
         <executions>
           <execution>
             <id>generate-dep-list</id>
@@ -71,6 +74,7 @@
        <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
+        <version>${build-helper-plugin.version}</version>
         <executions>
           <execution>
             <id>attach-artifacts</id>
